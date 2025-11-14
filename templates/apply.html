@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Подать заявку | Ищу девушку</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #1e1e2f;
+            color: #ffcc00;
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+            padding: 40px 20px;
+            margin: 0;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%231e1e2f"/><circle cx="20" cy="20" r="3" fill="%23333"/><circle cx="60" cy="70" r="2" fill="%23333"/></svg>');
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #2d2d44;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 0 30px rgba(255, 204, 0, 0.3);
+            border: 3px solid #ffcc00;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 25px;
+            text-shadow: 0 0 10px #ffcc00;
+            font-weight: 700;
+        }
+
+        form {
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin: 15px 0 5px;
+            color: #ff9900;
+            font-weight: 700;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border: 2px solid #ffcc00;
+            background-color: #3a3a55;
+            color: #ffcc00;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        button {
+            background-color: #ffcc00;
+            color: #1e1e2f;
+            border: none;
+            padding: 12px 25px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #ff9900;
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #aaa;
+        }
+
+        a {
+            color: #ffcc00;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Подать заявку на рассмотрение</h1>
+        <form method="POST" enctype="multipart/form-data">
+            <label for="name">Имя (или кличка):</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="weight">Вес (в кг, минимум 200):</label>
+            <input type="number" id="weight" name="weight" min="200" required>
+
+            <label for="height">Рост (в см, максимум 140):</label>
+            <input type="number" id="height" name="height" max="140" required>
+
+            <label for="transport">Средство передвижения:</label>
+            <select id="transport" name="transport" required>
+                <option value="">— Выберите —</option>
+                <option value="beaz">БелАЗ</option>
+                <option value="tank">Танк</option>
+                <option value="dragon">Дракон</option>
+                <option value="other">Другое (укажите в примечании)</option>
+            </select>
+
+            <label for="photo">Фотография:</label>
+            <input type="file" id="photo" name="photo" accept="image/*">
+
+            <label for="notes">Примечания (монобровь? ирокез? вши?):</label>
+            <textarea id="notes" name="notes" rows="4" placeholder="Опишите свои уникальные особенности..."></textarea>
+
+            <button type="submit">Отправить заявку</button>
+        </form>
+
+        <footer>
+            <p><a href="/">← На главную</a></p>
+            © 2025 Штопор Всевышний. Все права защищены.
+        </footer>
+    </div>
+</body>
+</html>
